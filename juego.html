@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego: Adivina el número</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="titulos">Adivina el número</h1>
+
+    <div class="caja">
+        <h2 class="titulos">¿Cómo funciona?</h2>
+        <p>El juego elige un número al azar entre 1 y 100. Tenés que ir probando números hasta encontrar el correcto. Si el número que ponés es más alto o más bajo, el juego te lo va a indicar. Podés intentar las veces que quieras.</p>
+    </div>
+
+    <p>Es un número del 1 al 100...</p>
+
+    <input type="number" id="intento" placeholder="Tu número">
+    <button onclick="adivinar()">Probar</button>
+    <p id="resultado"></p>
+    <p id="intentos"></p>
+
+    <button onclick="reiniciar()">Reiniciar juego</button>
+    <button onclick="cerrarSesion()">Cerrar sesión</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

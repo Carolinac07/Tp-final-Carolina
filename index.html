@@ -1,0 +1,44 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Sesion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login">
+        <br>
+        <h2 class="titulos">Iniciar Sesión</h2>
+        <input type="text" id="usuario" placeholder="Usuario">
+        <input type="password" id="Contraseña" placeholder="Contraseña">
+        <button onclick="validacion()" id="botonIngresar">Ingresar</button><br><br>
+
+        <h2 class="titulos">Crear Cuenta</h2>
+        <input type="text" id="nuevoUsuario" placeholder="Usuario">
+        <input type="password" id="nuevaContra" placeholder="Contraseña">
+        <button onclick="crearCuenta()">Crear Cuenta</button><br>
+        <p id="mensaje"></p><br>
+
+  
+        <button onclick="validacion()">Iniciar sesión</button>
+        <p id="mensaje2"></p>
+    </div>
+    
+    <div class="lista"><br>
+        <h2 class="titulos">Usuarios guardados</h2>
+        <ul id="listaUsuarios"></ul>
+        <button onclick="mostrarUsuarios()">Mostrar Usuarios</button>
+    </div>
+
+    <div class="info caja">
+        <h2 class="titulos">Sobre esta página</h2>
+        <p>Esta página permite crear usuarios, iniciar sesión y acceder a un pequeño juego. Fue hecha con HTML, CSS y JavaScript. A su vez, tiene una api que tira datos inútiles.</p>
+    </div>
+
+    <p id="datoInutil"></p>
+    <button onclick="traerDato()">Mostrar dato inútil</button>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
