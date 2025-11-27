@@ -8,7 +8,6 @@ function crearCuenta() {
         return
     }
 
-    // Obtenemos los usuarios guardados en localStorage
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || {}
 
     if (usuarios[nuevoUsuario]) {
@@ -16,7 +15,6 @@ function crearCuenta() {
         return
     }
 
-    // Guardamos el usuario nuevo
     usuarios[nuevoUsuario] = nuevaContra;
     localStorage.setItem("usuarios", JSON.stringify(usuarios))
 
@@ -25,17 +23,14 @@ function crearCuenta() {
     document.getElementById("nuevaContraseña").value = ""
 }
 
-// Función de inicio de sesión
 function validacion() {
     const usuario = document.getElementById("usuario").value;
     const contraseña = document.getElementById("Contraseña").value;
     const mensaje2 = document.getElementById("mensaje")
 
-    // Usuario y contraseña por defecto
     const userDefecto = "admin"
     const contraDefecto = "1234"
 
-    // Obtenemos usuarios guardados en localStorage
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || {}
 
     if ((usuario === userDefecto && contraseña === contraDefecto) || 
@@ -54,18 +49,15 @@ function validacion() {
 
 function mostrarUsuarios() {
     const lista = document.getElementById("listaUsuarios");
-    lista.innerHTML = "" // Limpiamos la lista antes de mostrar
+    lista.innerHTML = "" 
 
-    // Obtenemos usuarios guardados en localStorage
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || {}
 
-    // Si no hay usuarios guardados
     if (Object.keys(usuarios).length === 0) {
         lista.innerHTML = "<li>No hay usuarios guardados</li>"
         return
     }
 
-    // Mostramos cada usuario
     for (let nombre in usuarios) {
         let li = document.createElement("li")
         li.textContent = nombre

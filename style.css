@@ -4,7 +4,6 @@ font-family: Arial, sans-serif;
 text-align: center;
 }
 
-
 .caja{
 width: 300px;
 margin: 20px auto;
@@ -13,13 +12,11 @@ background: white;
 border: 1px solid #c9b08a;
 }
 
-
 input, button{
 width: 80%;
 margin: 5px;
 padding: 7px;
 }
-
 
 button{
 background-color: #f3c68a;
